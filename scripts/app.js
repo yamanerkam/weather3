@@ -41,7 +41,10 @@ formControl.addEventListener("submit",e => {
     updateCity(cityie).then(data => {
         update(data)
         console.log(data)
-    }).catch(err=>console.log(err))
+    }).catch(err=>{
+        console.log(err)
+        alert("invalid city name!")
+    })
     formControl.reset()
 
 })
