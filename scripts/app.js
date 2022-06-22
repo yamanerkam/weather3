@@ -44,6 +44,7 @@ formControl.addEventListener("submit",e => {
     }).catch(err=>{
         console.log(err)
         alert("invalid city name!")
+        console.log("fuck")
     })
     formControl.reset()
 
