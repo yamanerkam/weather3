@@ -37,8 +37,8 @@ const updateCity = async (city)=>{
 formControl.addEventListener("submit",e => {
     card.style.visibility = "visible";
     e.preventDefault()
-    const cityie = formControl.city.value
-    updateCity(cityie).then(data => {
+    const city = formControl.city.value
+    updateCity(city).then(data => {
         update(data)
         console.log(data)
     }).catch(err=>{
