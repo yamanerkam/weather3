@@ -47,5 +47,17 @@ formControl.addEventListener("submit",e => {
         console.log("fuck")
     })
     formControl.reset()
+    localStorage.setItem('city', city);
+    console.log(localStorage.getItem('city'))
 
 })
+
+
+if(localStorage.getItem('city')){
+    card.style.visibility = "visible";
+    updateCity(localStorage.getItem('city'))
+      .then(data => {
+        update(data)
+      })
+      .catch(err => console.log(err));
+  }
